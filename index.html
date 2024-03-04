@@ -3,17 +3,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>세션 타이머</title>
+    <title>자바스크립트 타이머</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div id="wrapper">
         <form>
-            <label><input type="text" id="startMin">분</label>
-            <label><input type="text" id="startSec">초</label>
+            <label><input type="text" id="startMin"> <strong>Minutes</strongs></label>
+            &nbsp;
+            <label><input type="text" id="startSec"> Seconds</label>
+            &nbsp;
             <input type="button" value="START" class="start-btn">
+            &nbsp;
             <input type="button" value="PAUSE" class="pause-btn">
+            &nbsp;
             <input type="button" value="RESET" class="reset-btn">
+            &nbsp;
         </form>
         <hr>
           <div id="display" class="remaining"></div>
