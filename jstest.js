@@ -1,3 +1,4 @@
+// 강사님 코드
 var start_button = document.querySelector(".start-btn");
 start_button.addEventListener("click", startTimer);
 var stop_button = document.querySelector(".pause-btn");
@@ -9,7 +10,7 @@ pause_flags = true;
 function startTimer() {
     if (start_flags == false && pause_flags == false) { // PAUSE를 누르고 나서
         timer = setInterval(countTimer, 1000);
-        document.querySelector('#pause_message').innerText = "타이머 다시 동작중";
+        document.querySelector('#pause_message').innerText = "Resume";
     } else if (start_flags == false && pause_flags == true) { // START 누르고 START 누르면
         clearInterval(timer);
         alert("이미 타이머가 동작 중입니다.")
@@ -32,9 +33,8 @@ function countTimer() {
             sec = 59;
         }
         else {
-            document.querySelector('#display').innerText = "타이머 정상 종료";
-            document.querySelector('#pause_message').innerText = "2초 후 새로고침 됩니다.";
-            setTimeout(function () {window.location.reload()}, 2000);
+            document.querySelector('#display').innerText = "Time over";
+            setTimeout(function () {window.location.reload()}, 3000);
         }
     }
 }
@@ -43,11 +43,11 @@ function pauseTimer() {
     pause_flags = false;
     resume = document.querySelector(".start-btn");
     resume.value = "RESUME";
-    document.querySelector('#pause_message').innerText = "타이머 일시 중지됨";
+    document.querySelector('#pause_message').innerText = "Pause";
 }
 function resetTimer() {
     clearInterval(timer);
-    document.querySelector('#display').innerText = "타이머 강제 리셋";
-    document.querySelector('#pause_message').innerText = "2초 후 새로고침 됩니다.";
+    document.querySelector('#display').innerText = "Reset";
     setTimeout(function () {window.location.reload()}, 2000);
 }
+
