@@ -24,7 +24,7 @@ function startTimer() {
 function countTimer() {
     if (sec != 0) {
         sec = sec - 1;
-        document.querySelector('#display').innerText = min + "분 " + sec + "초";
+        document.querySelector('#display').innerText = min + " : " + sec;
     }
     else {
         if (min != 0) {
